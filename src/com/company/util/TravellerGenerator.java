@@ -7,12 +7,13 @@ public class TravellerGenerator {
     private List<Traveller> tZeroList;
     private List<Traveller> tOneList;
     private List<Traveller> tTwoList;
-
+    private int listSize;
     public TravellerGenerator(List<Traveller> tZeroList,
-                              List<Traveller> tOneList, List<Traveller> tTwoList) {
+                              List<Traveller> tOneList, List<Traveller> tTwoList, int listSize) {
         this.tZeroList = tZeroList;
         this.tOneList = tOneList;
         this.tTwoList = tTwoList;
+        this.listSize = listSize;
     }
 
     public TravellerGenerator() {
@@ -20,6 +21,14 @@ public class TravellerGenerator {
         this.tTwoList = new ArrayList<>();
         this.tZeroList = new ArrayList<>();
 
+    }
+
+    public int getListSize() {
+        return listSize;
+    }
+
+    public void setListSize(int listSize) {
+        this.listSize = listSize;
     }
 
     public List<Traveller> gettZeroList() {
@@ -86,8 +95,10 @@ public class TravellerGenerator {
         int maxFlightNim = 18;
 
         int tZeroCount = ranNum.nextInt(6) + 1;
-        int tOneCount = new Random().nextInt(6) + 1;
-        int tTwoCount  = new Random().nextInt(6) + 1;
+        int tOneCount = ranNum.nextInt(6) + 1;
+        int tTwoCount  = ranNum.nextInt(6) + 1;
+
+        listSize = tZeroCount + tOneCount + tTwoCount;
 
         // creating t0 list
         for(int i=0; i<tZeroCount; i++){
