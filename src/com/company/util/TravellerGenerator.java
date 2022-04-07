@@ -24,6 +24,7 @@ public class TravellerGenerator {
     }
 
     public int getListSize() {
+
         return listSize;
     }
 

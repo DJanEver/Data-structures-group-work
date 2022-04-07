@@ -8,6 +8,7 @@ public class TravellerNode {
 
     public TravellerNode(Traveller data) {
         this.data = data;
+
         this.previous = null;
         this.next = null;
     }

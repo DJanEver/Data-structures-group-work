@@ -36,7 +36,8 @@ public class Traveller {
         this.priorityNum = priorityNum;
     }
 
-    public int getID() {
+    public int getID()
+    {
         return ID;
     }
 
