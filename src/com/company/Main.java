@@ -13,7 +13,7 @@ public class Main {
 
         TravellerGenerator travellerGenerator = new TravellerGenerator();
         Arrival arrival = new Arrival();
-        TravellerNode mainHead = new TravellerNode();
+        TravellerNode mainHead;
 
         //populate and sort t0, t1, t2 list
          travellerGenerator.populateTravelerLists();
@@ -43,6 +43,11 @@ public class Main {
         arrival.displayNodes(mainHead);
 
 
+        System.out.println(" ");
+        System.out.println(" ");
+        System.out.println("Reports");
+        arrival.displayNumLOneMandF(mainHead);
+        arrival.displayNumLTwoMandF(mainHead);
 
         mainHead = arrival.removeFromList(mainHead);
         System.out.println(" ");

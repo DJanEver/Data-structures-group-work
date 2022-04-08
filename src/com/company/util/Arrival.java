@@ -51,7 +51,6 @@ public class Arrival {
 
     public TravellerNode createList(List<Traveller> tZero, List<Traveller> tOne, List<Traveller> tTwo){
         List<Traveller> mainList = new ArrayList<>();
-        int count = 0;
         mainList.addAll(tZero);
         mainList.addAll(tOne);
         mainList.addAll(tTwo);
@@ -123,5 +122,59 @@ public class Arrival {
         }
     }while (head != null);
         return null;
+    }
+
+    public Boolean displayNumLOneMandF(TravellerNode head){
+        int numF = 0;
+        int numM = 0;
+
+        if(head == null){
+            System.out.println("List is empty");
+            return false;
+        }else{
+            while(head != null){
+               if(head.getData().getGender().equals("Male") &&
+                       head.getData().getPriorityNum() == 1)
+               {
+                   numM++;
+               }else if(head.getData().getGender().equals("Female") &&
+                       head.getData().getPriorityNum() == 1){
+                   numF++;
+
+               }
+                head = head.getNext();
+            }
+        }
+        System.out.println("Number of Level one Male: " + numM);
+        System.out.println("Number of Level one Females: " + numF);
+
+        return true;
+    }
+
+    public Boolean displayNumLTwoMandF(TravellerNode head){
+        int numFT = 0;
+        int numMT = 0;
+
+        if(head == null){
+            System.out.println("List is empty");
+            return false;
+        }else{
+            while(head != null){
+                if(head.getData().getGender().equals("Male") &&
+                        head.getData().getPriorityNum() == 2)
+                {
+                    numMT++;
+                }else if(head.getData().getGender().equals("Female") &&
+                        head.getData().getPriorityNum() == 2){
+                    numFT++;
+
+                }
+                head = head.getNext();
+            }
+        }
+        System.out.println("Number of Level Two Male: " + numMT);
+        System.out.println("Number of Level Two Females: " + numFT);
+
+        return true;
     }
 }
