@@ -2,7 +2,9 @@ package com.company.models;
 
 import java.util.Random;
 
+//Data class
 public class Traveller {
+    // attributes
     private int ID;
     private String firstName;
     private String lastName;
@@ -22,7 +24,6 @@ public class Traveller {
         this.priorityNum = new Random().nextInt(2) + 1;
     }
 
-//    int num = new Random().nextInt(2) +1;
 
     //Primary Constructor
     public Traveller(int iD, String firstName, String lastName,

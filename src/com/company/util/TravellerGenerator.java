@@ -3,6 +3,7 @@ package com.company.util;
 import com.company.models.Traveller;
 import java.util.*;
 
+//Generates travellers data
 public class TravellerGenerator {
     private List<Traveller> tZeroList;
     private List<Traveller> tOneList;
@@ -61,18 +62,19 @@ public class TravellerGenerator {
                 100009,100010 , 100011, 100012, 100013, 100014, 100015, 100016, 100017, 100018));
     }
 
+    //list of data to pull from
     private static List<String> getFirstnameList(){
         return new ArrayList<>(Arrays.asList("Hakeem", "Jim", "Willam", "Pam", "David", "Tori", "Gilpin", "Kendrick",
                 "Kermait","Level" , "Ren", "Jimpusf", "Gehwn", "Wiam", "Dever", "Super", "Dooper", "Uper"));
     }
 
-
+    //list of data to pull from
     private static List<String> getLastnameList(){
         return new ArrayList<>(Arrays.asList("Watson", "Jimcricket", "Defour", "Parish", "Walker", "Homes", "James", "Lamar",
                 "swim","Hop" , "Run", "Skip", "Walk", "Babby", "Keem", "Kumar", "Roper", "Super"));
     }
 
-
+    //list of data to pull from
     private static List<String> getGenderList(){
         return new ArrayList<>(Arrays.asList("Female", "Male"));
     }
@@ -83,6 +85,7 @@ public class TravellerGenerator {
     }
 
 
+    //populating each list(t0, t1, t2) to then be sorted
     public void populateTravelerLists(){
         // Getting the list
         List<Integer> idList = getIdList();
@@ -148,6 +151,7 @@ public class TravellerGenerator {
     }
 
 
+    //utilizes java util function Compatator to short each element within the list via priority num
     public void sortLists(List<Traveller> listOne, List<Traveller> listZero, List<Traveller> listTwo){
         listOne.sort(new Comparator<Traveller>() {
             @Override

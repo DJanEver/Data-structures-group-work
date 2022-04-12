@@ -7,17 +7,21 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+//Doubly linked list class
 public class Arrival {
+    //attributes
     private TravellerNode head;
     private TravellerNode tail;
     private int listSize;
 
+    //Primary constructor
     public Arrival(TravellerNode head, TravellerNode tail, int listSize) {
         this.head = head;
         this.tail = tail;
         this.listSize = listSize;
     }
 
+    //Default constructor
     public Arrival() {
         this.head = null;
         this.tail = null;
@@ -49,12 +53,14 @@ public class Arrival {
         this.tail = tail;
     }
 
+    //creates doubly linked list
     public TravellerNode createList(List<Traveller> tZero, List<Traveller> tOne, List<Traveller> tTwo){
         List<Traveller> mainList = new ArrayList<>();
         mainList.addAll(tZero);
         mainList.addAll(tOne);
         mainList.addAll(tTwo);
 
+        //for each was used to add each node to the doubly linked list
         mainList.forEach((traveller) -> {
             TravellerNode newNode = new TravellerNode(traveller);
 
@@ -72,6 +78,8 @@ public class Arrival {
         });
         return head;
     }
+
+    //Loops through list to display each node
     public Boolean displayNodes(TravellerNode head){
         TravellerNode current = head;
         if(current == null){
@@ -86,7 +94,7 @@ public class Arrival {
         return true;
     }
 
-
+    //Deletes each node from the list
     public TravellerNode removeFromList(TravellerNode head){
         int count = 0;
         Random ran = new Random();
@@ -124,6 +132,7 @@ public class Arrival {
         return null;
     }
 
+    //creates the report level 1 male and female
     public Boolean displayNumLOneMandF(TravellerNode head){
         int numF = 0;
         int numM = 0;
@@ -151,6 +160,7 @@ public class Arrival {
         return true;
     }
 
+    //creates the report level 2 male and female
     public Boolean displayNumLTwoMandF(TravellerNode head){
         int numFT = 0;
         int numMT = 0;
